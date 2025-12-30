@@ -1,91 +1,80 @@
+############################
 # Dependencies
+############################
 node_modules/
+jspm_packages/
+.npm
+.pnpm-store
+
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+pnpm-debug.log*
 
-# Production builds
+############################
+# Build output
+############################
 dist/
 build/
-
-# Environment variables
-.env
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
-
-# Logs
-logs
-*.log
-
-# Runtime data
-pids
-*.pid
-*.seed
-*.pid.lock
-
-# Coverage directory used by tools like istanbul
 coverage/
+.nyc_output
 *.lcov
 
-# nyc test coverage
-.nyc_output
+############################
+# Environment variables
+############################
+.env
+.env.*
+!.env.example
 
-# Dependency directories
-jspm_packages/
+############################
+# Logs
+############################
+logs/
+*.log
 
-# Optional npm cache directory
-.npm
+############################
+# Runtime data
+############################
+pids/
+*.pid
+*.pid.lock
+*.seed
 
-# Optional REPL history
-.node_repl_history
-
-# Output of 'npm pack'
-*.tgz
-
-# Yarn Integrity file
-.yarn-integrity
-
-# dotenv environment variables file
-.env.test
-
-# parcel-bundler cache (https://parceljs.org/)
-.cache
-.parcel-cache
-
-# next.js build output
-.next
-
-# nuxt.js build output
-.nuxt
-
-# vuepress build output
-.vuepress/dist
-
-# Serverless directories
-.serverless
-
-# FuseBox cache
+############################
+# Cache / temp files
+############################
+.cache/
+.parcel-cache/
 .fusebox/
+*.tgz
+.yarn-integrity
+.node_repl_history
+*.tsbuildinfo
 
-# DynamoDB Local files
-.dynamodb/
+############################
+# NestJS specific
+############################
+.nest/
 
-# TernJS port file
-.tern-port
+############################
+# Docker
+############################
+docker-compose.override.yml
 
-# Stores VSCode versions used for testing VSCode extensions
-.vscode-test
-
-# IDE files
+############################
+# IDE / Editor
+############################
 .vscode/
+.vscode-test
 .idea/
 *.swp
 *.swo
 *~
 
-# OS generated files
+############################
+# OS files
+############################
 .DS_Store
 .DS_Store?
 ._*
@@ -94,6 +83,13 @@ jspm_packages/
 ehthumbs.db
 Thumbs.db
 
-# NestJS specific
-*.tsbuildinfo
-.nest/
+############################
+# Serverless / Cloud
+############################
+.serverless/
+.dynamodb/
+
+############################
+# Git
+############################
+.git-rewrite/
